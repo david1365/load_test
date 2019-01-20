@@ -1,0 +1,23 @@
+#TODO : change format to standard README.md file
+for each locust client :
+
+server full request :
+locust -f all.py --master --host=http://10.12.47.73:8282 --no-reset-stats
+
+client full request (cori5):
+for /l %x in (1, 1, 8) do start /B locust -f all.py --slave --no-reset-stats
+
+######################################################################################################
+server tak request :
+locust -f main.py --master --host=http://10.12.47.73:8282 --no-reset-stats
+
+client (corei5):
+for /l %x in (1, 1, 8) do start /B locust -f main.py --slave --no-reset-stats
+
+client (corei7):
+for /l %x in (1, 1, 12) do start /B locust -f main.py --slave --no-reset-stats
+
+######################################################################################################
+kill:
+taskkill /F /IM python.exe /T
+taskkill /F /IM locust.exe /T

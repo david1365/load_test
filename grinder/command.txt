@@ -1,0 +1,15 @@
+#TODO: change format of this file to standard readme file
+#TODO: change url location to a valid internet download link
+
+## Change to share drive path
+cd Y:\Share\Vakili\grinder-3.11-binary\grinder-3.11\lib
+
+run agent :
+java -classpath grinder.jar net.grinder.Grinder
+
+run console local:
+java -classpath grinder.jar net.grinder.Console
+
+run console remote:
+java -classpath grinder.jar net.grinder.Grinder grinder.properties
+

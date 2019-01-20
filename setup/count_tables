@@ -1,0 +1,13 @@
+SELECT 'deposit_count' as label, count(*) as counter FROM DE.DEPOSIT
+union all
+SELECT 'deposit_customer_rel_count' as label , count(*) as counter FROM DE.DEPOSIT_CUSTOMER_RELATION
+union all
+SELECT 'product_count' as label, count(*) as counter FROM DE.PRODUCT
+union all
+SELECT 'platform_count' as label, count(*) as platform_count FROM DE.PLATFORM
+union all
+SELECT 'customer_relation_count' as label, count(*) as counter FROM DE.CUSTOMER_RELATION_PROFILE
+union all
+SELECT 'real_customer_count' as label , count(*) as counter FROM CF.REAL_CUSTOMER
+union all
+SELECT 'customer_count' as label , count(*) as counter FROM CF.CUSTOMER;
